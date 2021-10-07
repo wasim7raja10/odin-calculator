@@ -4,7 +4,6 @@ screenUp.textContent = "0";
 const screenDown = document.querySelector('.down');
 screenDown.textContent = "0";
 let result;
-const operation = ['+', '−', '×', '÷']
 let flag = false;
 
 function add(x, y) {
@@ -41,7 +40,7 @@ function operate(operator, x) {
       result = x;
       break;
   }
-  screenDown.textContent = result;
+  screenDown.textContent = +result.toFixed(5);
 }
 
 function checkDecimal() {
