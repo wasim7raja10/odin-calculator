@@ -36,6 +36,7 @@ body {
   border: 2px solid black;
   font-size: 2rem;
   text-align: right;
+  min-height: 109px;
 }
 
 .screen p {
@@ -45,8 +46,11 @@ body {
 .up {
   font-size: 1rem;
   padding-bottom: 1rem;
+  min-height: 35px;
 }
-
+.down {
+  min-height: 38px;
+}
 /* button */
 
 .buttons {
