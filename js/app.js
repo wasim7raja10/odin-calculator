@@ -40,7 +40,8 @@ function operate(operator, x) {
       result = x;
       break;
   }
-  screenDown.textContent = +result.toFixed(5);
+  result = +result.toFixed(5);
+  screenDown.textContent = result;
 }
 
 function checkDecimal() {
