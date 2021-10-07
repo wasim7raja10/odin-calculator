@@ -9,5 +9,29 @@ html {
 }
 
 body {
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc {
+  flex: 1 0 auto;
+  width: 400px;
+  border: 2px solid black;
+}
+
+footer {
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer a {
+  align-self: center;
+}
+footer img {
+  width: 1.5rem;
 }
