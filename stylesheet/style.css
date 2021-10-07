@@ -1,3 +1,5 @@
+/* border-box */
+
 html {
   box-sizing: border-box;
 }
@@ -13,11 +15,55 @@ body {
   flex-direction: column;
 }
 
+
+/* calc body */
+
 .calc {
   flex: 1 0 auto;
   width: 400px;
   border: 2px solid black;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+/* screen */
+
+.screen {
+  padding: 1rem;
+  border: 2px solid black;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.screen p {
+  margin: 0;
+}
+
+.up {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* button */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  flex: 1 1 0;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  justify-content: space-evenly;
+}
+
+
+/* footer */
 
 footer {
   flex-shrink: 0;
