@@ -5,6 +5,7 @@ const screenDown = document.querySelector('.down');
 screenDown.textContent = "0";
 let result;
 const operation = ['+', '−', '×', '÷']
+let flag = false;
 
 function add(x, y) {
   return x + y;
@@ -86,23 +87,28 @@ function start(e) {
   const data = e.target.textContent;
   if (data >= 0 && data <= 9 || data == '.') {
     displayDown(data);
+    flag = true;
   } else if (data == 'clear') {
     clear();
   } else if (data == 'delete') {
     backspace();
   } else if (data == '=') {
-    if (screenUp.textContent[screenUp.textContent.length - 1] != '=') {
+    if (screenUp.textContent[screenUp.textContent.length - 1] != '=' || !flag) {
       displayUp(data);
       const operator = screenUp.textContent.split(" ")[1];
       operate(operator, +screenDown.textContent);
     }
   } else {
     // operation
-    if (result == null) {
+    if (!flag) {
+      screenUp.textContent[screenUp.textContent.length - 1] = data;
+    } else if (result == null) {
       result = +screenDown.textContent;
+      flag = false;
     } else {
       const operator = screenUp.textContent[screenUp.textContent.length - 1];
       operate(operator, +screenDown.textContent);
+      flag = false;
     }
     displayUp(data);
   }
